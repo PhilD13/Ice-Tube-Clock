@@ -9829,7 +9829,7 @@ general purpose rectifier, 1 A</description>
 <wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
 <circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
 <text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+UB" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<pin name="VBB" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -22896,9 +22896,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="2.664" y1="-0.127" x2="1.404" y2="-0.127" width="0.127" layer="51"/>
 <wire x1="1.404" y1="-0.127" x2="1.136" y2="-0.127" width="0.127" layer="21"/>
 <wire x1="2.095" y1="-1.651" x2="2.4247" y2="-1.1118" width="0.127" layer="21" curve="13.609443" cap="flat"/>
-<pad name="D" x="-2.54" y="0" drill="0.8128" shape="long" rot="R90"/>
-<pad name="S" x="2.54" y="0" drill="0.8128" shape="long" rot="R90"/>
-<pad name="G" x="0" y="0" drill="0.8128" shape="long" rot="R90"/>
+<pad name="1" x="-2.54" y="0" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="0.8128" shape="long" rot="R90"/>
 <text x="-2.54" y="3.048" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-3.302" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
@@ -23142,9 +23142,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <devices>
 <device name="TP0610KL" package="TO92-OVAL">
 <connects>
-<connect gate="1" pin="D" pad="S"/>
-<connect gate="1" pin="G" pad="G"/>
-<connect gate="1" pin="S" pad="D"/>
+<connect gate="1" pin="D" pad="3"/>
+<connect gate="1" pin="G" pad="2"/>
+<connect gate="1" pin="S" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -23152,9 +23152,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </device>
 <device name="ZVP3306" package="TO92-OVAL">
 <connects>
-<connect gate="1" pin="D" pad="S"/>
-<connect gate="1" pin="G" pad="G"/>
-<connect gate="1" pin="S" pad="D"/>
+<connect gate="1" pin="D" pad="3"/>
+<connect gate="1" pin="G" pad="2"/>
+<connect gate="1" pin="S" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -23162,9 +23162,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </device>
 <device name="BS250" package="TO92-OVAL">
 <connects>
-<connect gate="1" pin="D" pad="D"/>
-<connect gate="1" pin="G" pad="G"/>
-<connect gate="1" pin="S" pad="S"/>
+<connect gate="1" pin="D" pad="1"/>
+<connect gate="1" pin="G" pad="2"/>
+<connect gate="1" pin="S" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -24404,12 +24404,12 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 <junction x="162.56" y="139.7"/>
 <pinref part="C6" gate="G$1" pin="+"/>
 <pinref part="D3" gate="G$1" pin="C"/>
-<pinref part="SUPPLY2" gate="G$1" pin="+UB"/>
+<pinref part="SUPPLY2" gate="G$1" pin="VBB"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <pinref part="D5" gate="G$1" pin="C"/>
 </segment>
 <segment>
-<pinref part="SUPPLY1" gate="G$1" pin="+UB"/>
+<pinref part="SUPPLY1" gate="G$1" pin="VBB"/>
 <pinref part="IC2" gate="G$1" pin="VBB"/>
 </segment>
 </net>
@@ -24534,6 +24534,7 @@ Note the THM package has the ground pads on both sides of the PCB so that the ma
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,1,213.36,101.6,VBB,+UB,,,,"/>
 <approved hash="102,1,213.36,101.6,VBB,+UB,,,,"/>
 <approved hash="104,1,208.28,101.6,IC2,VCC,N$39,,,"/>
 </errors>
